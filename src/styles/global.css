@@ -1,3 +1,186 @@
 @import url('./fonts.css');
 
 
+:root {
+    --color-primary: #3498db;
+    --color-success: #2ecc71;
+    --color-error: #e74c3c;
+    --font-size-small: 1.4rem;
+    --font-size-primary: 1.6rem;
+    --font-size-title: 2.8rem;
+    --font-size-large: 1.8rem;
+    --toastify-toast-min-height: 5rem !important;
+    --toastify-toast-max-height: 5rem !important;
+    --toastify-toast-width: 380px !important;
+    --max-content-width: 500px;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  html {
+    font-size: 62.5%;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  body {
+    color: var(--color-text-primary);
+    direction: rtl;
+    overflow: hidden;
+    height: 100%;
+    direction: inherit;
+  }
+
+  body.-fa {
+    font-family: 'iranyekan';
+  }
+
+  body:not(.-fa) {
+    font-family: 'mali';
+  }
+  
+  .container:not(.-dark) {
+    --color-background: #fff;
+    --color-text-primary: #000;
+    --color-border: #d4d4d4;
+    --color-text-secondary: #949494;
+    --color-placeholder: #d4d4d4;
+    --color-focus: rgba(0, 0, 0, 0.7);
+  }
+  
+  .container.-dark {
+    --color-background: #161616;
+    --color-text-primary: #fff;
+    --color-border: #696969;
+    --color-text-secondary: rgba(255, 255, 255, 0.5);
+    --color-placeholder: rgba(255, 255, 255, 0.5);
+    --color-focus: rgba(255, 255, 255, 0.7);
+  }
+  
+  .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--color-background);
+    color: var(--color-text-primary);
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  a:visited,
+  a:hover,
+  a:active {
+    color: inherit;
+    background: transparent;
+  }
+  
+  button {
+    font-family: inherit;
+    background: transparent;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  input {
+    font-family: inherit;
+    background: var(--color-background);
+    color: var(--color-text-primary);
+  }
+  
+  input:focus {
+    outline: none;
+  }
+  
+  .Typewriter__cursor {
+    display: inline-block;
+  }
+  
+  .main {
+    height: 100%;
+    --theme-change-button-top: 2.75rem;
+    --theme-change-button-right: 2.25rem;
+  }
+  
+  .themeClip {
+    position: fixed;
+    right: var(--theme-change-button-right);
+    top: var(--theme-change-button-top);
+    border-radius: 0;
+    z-index: 1000;
+    border-radius: 100%;
+  }
+  
+  .themeClip.-animated {
+    animation: open 1.5s ease-in;
+  }
+  
+  .themeClip .Results_resultItem {
+    transform: translateY(0);
+    opacity: 1;
+    animation: none;
+  }
+  
+  .Toast * {
+    font-family: inherit !important;
+    font-size: 1.4rem;
+  }
+  
+  @keyframes open {
+    from {
+      right: var(--theme-change-button-right);
+      top: var(--theme-change-button-top);
+      width: 0rem;
+      height: 0rem;
+      clip-path: circle(0rem at center);
+    }
+    to {
+      top: calc(-250vmax + var(--theme-change-button-top));
+      right: calc(-250vmax + var(--theme-change-button-right));
+      width: 500vmax;
+      height: 500vmax;
+      clip-path: circle(100% at center);
+    }
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    html {
+      color-scheme: dark;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .main {
+      --theme-change-button-top: 4rem;
+      --theme-change-button-right: 4.25rem;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    html {
+      font-size: 56%;
+    }
+  }
+  
+  @media (max-width: 350px) {
+    html {
+      font-size: 50%;
+    }
+  }
+  
