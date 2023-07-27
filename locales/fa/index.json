@@ -1,0 +1,12 @@
+{
+  "title": "قضایای مباشر",
+  "submitButton": "مشاهده نتایج",
+  "predicative": "حملیه",
+  "conditional": "شرطیه",
+  "subjectMissing": "لطفا مقدار موضوع را وارد نمایید",
+  "predicateMissing": "لطفا مقدار محمول را وارد نمایید",
+  "subjectAndPredicateMissing": "لطفا مقدار موضوع و محمول را وارد نمایید",
+  "antecedentMissing": "لطفا مقدار مقدم را وارد نمایید",
+  "consequentMissing": "لطفا مقدار تالی را وارد نمایید",
+  "antecedentAndConsequentMissing": "لطفا مقدار مقدم و تالی را وارد نمایید"
+}

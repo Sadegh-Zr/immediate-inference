@@ -1,0 +1,3 @@
+export const JUST_REMOVED = 'JUST_REMOVED';
+export const JUST_TYPED = 'JUST_TYPED';
+export const TYPED_AND_REMOVED = 'TYPED_AND_REMOVED';

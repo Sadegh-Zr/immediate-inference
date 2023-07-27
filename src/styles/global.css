@@ -1,5 +1,5 @@
+@import url('./reset.css');
 @import url('./fonts.css');
-
 
 :root {
     --color-primary: #3498db;
@@ -14,14 +14,7 @@
     --toastify-toast-width: 380px !important;
     --max-content-width: 500px;
   }
-  
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-  }
+
   
   html {
     font-size: 62.5%;
@@ -32,7 +25,6 @@
   
   body {
     color: var(--color-text-primary);
-    direction: rtl;
     overflow: hidden;
     height: 100%;
     direction: inherit;
@@ -44,6 +36,10 @@
 
   body:not(.-fa) {
     font-family: 'mali';
+  }
+
+  body.-rtl {
+    direction: rtl;
   }
   
   .container:not(.-dark) {
@@ -141,7 +137,32 @@
     font-family: inherit !important;
     font-size: 1.4rem;
   }
+
+  .-bold {
+    color: var(--color-text-primary);
+    font-weight: bold;
+  }
   
+  .-error {
+    color: var(--color-error);
+  }
+  
+  .-secondary {
+    color: var(--color-text-secondary);
+  }
+  
+  .-success {
+    color: var(--color-success);
+  }
+  
+  .rodal-dialog {
+    background: var(--color-background) !important;
+  }
+
+  .container.-dark .rodal-mask{
+    background: rgb(108 108 108 / 20%);
+  }
+
   @keyframes open {
     from {
       right: var(--theme-change-button-right);

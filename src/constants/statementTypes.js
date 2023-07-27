@@ -1,0 +1,2 @@
+export const PREDICATIVE = 'PREDICATIVE';
+export const CONDITIONAL = 'CONDITIONAL';

@@ -1,0 +1,133 @@
+.StatementForm {
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputContainer {
+  display: flex;
+}
+
+.StatementForm.predicative .inputContainer {
+  justify-content: space-between;
+}
+
+.StatementForm.conditional .inputContainer {
+  flex-direction: column;
+}
+
+.subjectForm,
+.predicateForm {
+  display: flex;
+}
+
+:global(body.-ltr) .StatementForm.predicative .subjectForm {
+  margin-right: 3rem;
+  /* animation: 0.3s fadeInSubject forwards ease-out 1.1s;
+    opacity: 0;
+    transform: scale(1.2); */
+}
+
+:global(body.-rtl) .StatementForm.predicative .subjectForm {
+  margin-left: 3rem;
+}
+
+.StatementForm.conditional .predicateForm {
+  margin-top: 2rem;
+}
+
+@keyframes fadeInSubject {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.predicateForm {
+  display: flex;
+  /* animation: 0.3s fadeInPredicate forwards ease-out 1.6s;
+    opacity: 0;
+    transform: scale(1.2); */
+}
+
+:global(body.-ltr) .predicateForm {
+  flex-direction: row-reverse;
+}
+
+@keyframes fadeInPredicate {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.subjectForm__input,
+.predicateForm__input {
+  border: 1px solid var(--color-border);
+  padding: 1rem 2rem;
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+.StatementForm.predicative .subjectForm__input,
+.StatementForm.predicative .predicateForm__input {
+  font-size: var(--font-size-large);
+}
+
+.StatementForm.conditional .subjectForm__input,
+.StatementForm.conditional .predicateForm__input {
+  font-size: var(--font-size-primary);
+}
+
+.subjectForm__input:focus,
+.predicateForm__input:focus {
+  border: 1px solid var(--color-focus);
+  z-index: 4;
+}
+
+:global(body.-rtl) .StatementForm.predicative .subjectForm__input {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  margin-right: -1px;
+}
+
+:global(body.-ltr) .subjectForm__input,
+:global(body.-ltr) .predicateForm__input {
+  border-radius: 10px;
+  padding: 1.5rem 2.5rem;
+}
+
+.StatementForm.conditional .subjectForm__input,
+.StatementForm.conditional .predicateForm__input {
+  border-radius: 10px;
+  padding: 1.2rem 2rem;
+}
+
+.predicateForm__input {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-left: -1px;
+}
+
+.subjectForm__input::placeholder,
+.predicateForm__input::placeholder {
+  color: var(--color-placeholder);
+}
+
+.quality {
+  display: flex;
+  flex-direction: column;
+}
+
+.switchesContainer {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+  .switchesContainer {
+    margin-top: 5rem;
+  }
+}

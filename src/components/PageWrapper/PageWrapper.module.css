@@ -1,0 +1,86 @@
+.PageWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal {
+  display: flex;
+  
+}
+
+.modal :global(.rodal-dialog) {
+  width: 400px !important;
+  max-width: calc(100% - 4rem);
+  position: initial !important;
+  height: auto !important;
+}
+
+.modal__contentContainer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-background);
+}
+
+.modal h1 {
+  margin-bottom: 1.5rem;
+  font-size: var(--font-size-large);
+}
+
+.modal p {
+  font-size: 1.4rem;
+  text-indent: 1rem;
+  line-height: 2;
+}
+
+.modal p:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.modal a {
+  color: var(--color-primary);
+}
+
+.modalButtonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.modal button {
+  font-size: var(--font-size-primary);
+  padding: 1rem 3rem;
+  border: none;
+  font-weight: bold;
+  position: relative;
+  color: var(--color-text-primary);
+}
+
+.modal button::after {
+  position: absolute;
+  content: "";
+  left: 50%;
+  width: 5rem;
+  height: 2px;
+  background-color: var(--color-text-primary);
+  transform: translateX(-50%) scaleX(1);
+  transition: 0.3s ease-out;
+  top: 100%;
+}
+
+.modal button:active::after {
+  transform: translateX(-50%) scaleX(1.5);
+}
+
+:global(body.-rtl) .modal :global(.rodal-close) {
+  right: auto;
+  left: 16px;
+}
+
+@media (pointer: fine) {
+  .modal button:hover::after {
+    transform: translateX(-50%) scaleX(1.5);
+  }
+}
+

@@ -1,0 +1,40 @@
+.ConditionalStatement {
+  display: flex;
+  flex-direction: column;
+}
+
+.typeWriter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+  width: 1500px;
+  max-width: calc(100vw - 4rem);
+  align-self: center;
+  flex-wrap: wrap;
+}
+
+.typeWriter__item {
+  font-size: var(--font-size-primary);
+  min-height: 2.3rem;
+}
+
+:global(body.-rtl) .typeWriter__item:first-child {
+  margin-right: 3rem;
+}
+
+:global(body.-ltr) .typeWriter__item:first-child {
+  margin-left: 3rem;
+}
+
+:global(body.-rtl) .typeWriter__item:not(:last-child) {
+  margin-left: 0.15rem;
+}
+
+:global(body.-ltr) .typeWriter__item:not(:last-child) {
+  margin-right: 0.15rem;
+}
+
+.hidden :global(.Typewriter__cursor) {
+  visibility: hidden;
+}

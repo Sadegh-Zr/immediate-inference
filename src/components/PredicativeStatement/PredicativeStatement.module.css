@@ -1,0 +1,46 @@
+.PredicativeStatement {
+}
+
+.typeWriter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+  /* opacity: 0;
+    animation: 0.2s fade forwards ease-out 1.7s; */
+}
+
+@keyframes fade {
+  to {
+    opacity: 1;
+  }
+}
+
+:global(body.-rtl) .typeWriter__item:first-child {
+  margin-right: 1.5rem;
+}
+
+:global(body.-ltr) .typeWriter__item:first-child {
+  margin-left: 1.5rem;
+}
+
+.typeWriter__item {
+  font-size: 2rem;
+  height: 4rem;
+}
+
+.subjectCursor {
+  visibility: hidden;
+}
+
+:global(body.-rtl) .subjectCursor {
+  transform: translateX(calc(100% + 1px));
+}
+
+:global(body.-ltr) .subjectCursor {
+  transform: translateX(calc(-100% - 1px));
+}
+
+.hiddenCursor {
+  visibility: hidden;
+}

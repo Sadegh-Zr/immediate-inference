@@ -1,0 +1,51 @@
+.pageWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.description {
+  font-size: var(--font-size-primary);
+  line-height: 1.8;
+  align-self: center;
+  margin-top: 2rem;
+  padding: 0 2rem;
+  color: var(--color-text-secondary);
+}
+
+.table {
+  margin-top: 3rem;
+  font-size: 1.5rem;
+  width: 700px;
+  max-width: calc(100% - 2rem);
+  align-self: center;
+  border-collapse: collapse;
+}
+
+.table th {
+  border-bottom: 1px solid var(--color-border);
+  padding: 1rem 1.5rem;
+}
+
+:global(body.-rtl) .table th:not(:last-child),
+:global(body.-rtl) .table td:not(:last-child) {
+  border-left: 1px solid var(--color-border);
+}
+
+:global(body.-ltr) .table th:not(:last-child),
+:global(body.-ltr) .table td:not(:last-child) {
+  border-right: 1px solid var(--color-border);
+}
+
+.table td {
+  text-align: center;
+  border-top: 1px solid var(--color-border);
+  padding: 1rem 1.5rem;
+}
+
+.table td:first-child {
+  font-weight: bold;
+}
+
+.table td:not(:first-child) {
+  color: var(--color-text-secondary);
+}

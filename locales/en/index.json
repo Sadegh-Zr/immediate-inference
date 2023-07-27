@@ -1,0 +1,12 @@
+{
+  "title": "Immediate Inference",
+  "submitButton": "Get Results",
+  "predicative": "Predicative",
+  "conditional": "Conditional",
+  "subjectMissing": "Please enter the subject value",
+  "predicateMissing": "Please enter the predicate value",
+  "subjectAndPredicateMissing": "Please enter the subject and predicate values",
+  "antecedentMissing": "Please enter the antecedent value",
+  "consequentMissing": "Please enter the consequent value",
+  "antecedentAndConsequentMissing": "Please enter the antecedent and consequent values"
+}

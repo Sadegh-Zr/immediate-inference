@@ -1,0 +1,62 @@
+.LanguageSwitch {
+  display: flex;
+  font-family: 'iranyekan';
+}
+
+.LanguageSwitch__option {
+  min-width: 4rem;
+  min-height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  transition: 0.2s ease-out;
+  font-size: var(--font-size-small);
+}
+
+.LanguageSwitch__option:not(.selected) {
+  color: var(--color-text-secondary);
+}
+
+.LanguageSwitch__option.selected {
+  font-weight: bold;
+  color: var(--color-text-primary);
+  border-color: var(--color-border);
+  pointer-events: none;
+}
+
+.LanguageSwitch__optionTitle {
+  position: relative;
+}
+
+.LanguageSwitch__optionTitle::after {
+  content: "";
+  position: absolute;
+  top: calc(100% + 1px);
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: calc(100% + 2px);
+  height: 1px;
+  border-radius: 2rem;
+  background-color: var(--color-text-primary);
+  transition: 0.2s ease-out;
+}
+
+.LanguageSwitch__option:active {
+  color: var(--color-text-primary);
+}
+
+.LanguageSwitch__option:active .LanguageSwitch__optionTitle::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+@media (pointer: fine) {
+  .LanguageSwitch__option:hover {
+    color: var(--color-text-primary);
+  }
+
+  .LanguageSwitch__option:hover .LanguageSwitch__optionTitle::after {
+    transform: translateX(-50%) scaleX(1);
+  }
+}
