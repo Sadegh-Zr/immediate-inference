@@ -178,16 +178,15 @@ export const query = graphql`
 
 export function Head({ pageContext, data }) {
   const { language } = pageContext;
-  const locales = data.locales.edges[2].node.data;
-    let obj = undefined;
-    if (locales) {
-        obj = JSON.parse(locales);
-    }
+  const pageLocale = data.locales.edges.find(edge => {
+    return edge.node.ns === 'index';
+  });
+  const localeData = JSON.parse(pageLocale.node.data);
   return (
     <>
       <html lang={language} dir={dir(language)} />
-      <title>{obj?.title}</title>
-      <meta name="description" content={obj?.description} />
+      <title>{localeData?.title}</title>
+      <meta name="description" content={localeData?.description} />
       <body className={`-${dir(language)} -${language}`} />
     </>
   )

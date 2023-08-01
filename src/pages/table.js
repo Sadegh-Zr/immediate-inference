@@ -93,14 +93,14 @@ export default Table;
 export function Head({ pageContext, data }) {
   const { language } = pageContext;
   const locales = data.locales.edges[2].node.data;
-  let obj = undefined;
-  if (locales) {
-      obj = JSON.parse(locales);
-  }
+  const pageLocale = data.locales.edges.find(edge => {
+    return edge.node.ns === 'table';
+  });
+  const localeData = JSON.parse(pageLocale.node.data);
   return (
     <>
       <html lang={language} dir={dir(language)} />
-      <title>{obj?.title}</title>
+      <title>{localeData.title}</title>
       <body className={`-${dir(language)} -${language}`} />
     </>
   )
