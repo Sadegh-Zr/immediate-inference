@@ -1,15 +1,15 @@
 import Header from '../Header';
-import 'rodal/lib/rodal.css';
 import Rodal from 'rodal';
 import * as React from 'react';
 import * as styles from './PageWrapper.module.css';
 import { EITAA_MESSANGER, EMAIL } from '../../constants';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
+import { isBrowser } from '../../utils';
 
 const PageWrapper = ({ className, title, children, hideLngChange }) => {
   const { t } = useTranslation('guide');
   const [isGuideModalVisible, updateModalVisibility] = React.useState(
-    !JSON.parse(localStorage.getItem('hasGuideShown') || false)
+    !JSON.parse(isBrowser ? localStorage.getItem('hasGuideShown') : false)
   );
   const installPrompt = React.useRef();
   const toggleModal = () => {

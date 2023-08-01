@@ -15,7 +15,7 @@ import {
   PARTICULAR,
   NEGATIVE,
 } from '../constants';
-import { appendComma, appendSuffix, getStatementType } from '../utils';
+import { appendComma, appendSuffix, getDefaultTheme, getStatementType } from '../utils';
 import { useDebounce } from 'use-debounce';
 
 export const useLanguage = () => {
@@ -26,6 +26,7 @@ export const useLanguage = () => {
 
 export const useTheme = () => {
   const result = React.useContext(ThemeContext);
+  if (!result.theme) return { ...result, theme: getDefaultTheme() }
   return result;
 };
 

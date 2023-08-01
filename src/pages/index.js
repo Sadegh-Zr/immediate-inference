@@ -15,8 +15,8 @@ import {
   PREDICATIVE,
   UNIVERSAL,
 } from '../constants';
-import { Slide, ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Slide, ToastContainer, toast } from 'react-toastify';
 import queryString from 'query-string';
 
 import { useLanguage } from '../hooks';
@@ -176,11 +176,18 @@ export const query = graphql`
 `;
 
 
-export function Head({ pageContext }) {
+export function Head({ pageContext, data }) {
   const { language } = pageContext;
+  const locales = data.locales.edges[2].node.data;
+    let obj = undefined;
+    if (locales) {
+        obj = JSON.parse(locales);
+    }
   return (
     <>
       <html lang={language} dir={dir(language)} />
+      <title>{obj?.title}</title>
+      <meta name="description" content={obj?.description} />
       <body className={`-${dir(language)} -${language}`} />
     </>
   )

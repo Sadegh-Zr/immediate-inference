@@ -1,5 +1,6 @@
 {
   "title": "Immediate Inference",
+  "description": "Get all true statements from your inputed statement using immediate inference in logic",
   "submitButton": "Get Results",
   "predicative": "Predicative",
   "conditional": "Conditional",

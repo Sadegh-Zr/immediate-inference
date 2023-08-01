@@ -34,5 +34,10 @@
   "universalAffirmativeShort": "م.ک",
   "particularAffirmativeShort": "م.ج",
   "universalNegativeShort": "س.ک",
-  "particularNegativeShort": "س.ج"
+  "particularNegativeShort": "س.ج",
+  "guide": "راهنما",
+  "themeSwitchLight": "تغییر به حالت روز",
+  "themeSwitchDark": "تغییر به حالت شب",
+  "github": "گیتهاب",
+  "table": "جدول"
 }

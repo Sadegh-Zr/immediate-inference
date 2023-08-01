@@ -1,14 +1,18 @@
 import * as React from 'react';
+import './src/styles/fonts.css'
+import './src/styles/reset.css';
 import './src/styles/global.css';
+import 'rodal/lib/rodal.css';
 import { useI18next } from 'gatsby-plugin-react-i18next';
 import { LngContext, ThemeContext } from './src/contexts';
+import { getDefaultTheme, isBrowser } from './src/utils';
 
 const containerClassName = 'container';
 
 const RootElement = ({ children }) => {
-    const { lng } = useI18next();
-  const wasDark = JSON.parse(localStorage.getItem('previousTheme') === 'dark');
-  const [theme, setTheme] = React.useState(wasDark ? 'dark' : 'light');
+  const { lng } = useI18next();
+  const wasDark = isBrowser ? localStorage.getItem('previousTheme') === 'dark' : 'light';
+  const [theme, setTheme] = React.useState(getDefaultTheme);
   const isComponentMounted = React.useRef(false);
   const scrollValue = React.useRef(0);
   const container = React.useRef();
@@ -69,22 +73,22 @@ const RootElement = ({ children }) => {
             ref={themeClip}
             className="themeClip"
           />
-          <ThemeContext.Provider value={{ theme, setTheme }}>
-            <LngContext.Provider value={lng}>
-              <div
-                ref={container}
-                className={`${containerClassName}${wasDark ? ' -dark' : ''}`}
-              >
-                {children}
-              </div>
-            </LngContext.Provider>
-          </ThemeContext.Provider>
+            <div
+              ref={container}
+              className={`${containerClassName}${wasDark ? ' -dark' : ''}`}
+            >
+              <ThemeContext.Provider value={{ theme, setTheme }}>
+                <LngContext.Provider value={lng}>
+                    {children}
+                </LngContext.Provider>
+              </ThemeContext.Provider>
+            </div>
         </main>
 
   );
 }
 
-export const wrapRootElement = ({ element }) => {
+export const wrapPageElement = ({ element }) => {
     return (
         <RootElement>
             {element}

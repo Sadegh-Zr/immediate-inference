@@ -90,11 +90,17 @@ export const query = graphql`
 
 export default Table;
 
-export function Head({ pageContext }) {
+export function Head({ pageContext, data }) {
   const { language } = pageContext;
+  const locales = data.locales.edges[2].node.data;
+  let obj = undefined;
+  if (locales) {
+      obj = JSON.parse(locales);
+  }
   return (
     <>
       <html lang={language} dir={dir(language)} />
+      <title>{obj?.title}</title>
       <body className={`-${dir(language)} -${language}`} />
     </>
   )

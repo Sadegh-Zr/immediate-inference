@@ -17,14 +17,15 @@ import { useStatementFunctions } from '../hooks';
 import * as styles from './results.module.css';
 import { graphql } from 'gatsby';
 import { dir } from 'i18next';
+import { isBrowser } from '../utils';
 
 const Results = () => {
   const { language: lng } = useI18next();
-  const searchParams = new URLSearchParams(window.location.search);
+  const searchParams = new URLSearchParams(isBrowser ? window.location.search : '');
   const isPredicative = searchParams.get('subject');
   const originalStatement = {
-    quality: searchParams.get('quality').toUpperCase(),
-    quantity: searchParams.get('quantity').toUpperCase(),
+    quality: (searchParams.get('quality'))?.toUpperCase(),
+    quantity: searchParams.get('quantity')?.toUpperCase(),
     firstFragment: searchParams.get(isPredicative ? 'subject' : 'antecedent'),
     secondFragment: searchParams.get(
       isPredicative ? 'predicate' : 'consequent'
@@ -34,6 +35,7 @@ const Results = () => {
   const { t } = useTranslation(['results', 'general']);
   const { generateImmediateStatements, generateStatement } =
     useStatementFunctions({ t, lng });
+  if (!isBrowser) return <div />
   const IMMEDIATE_STATEMENTS_TYPES = [
     {
       type: CONVERSION,
@@ -82,7 +84,7 @@ const Results = () => {
           style={{ animationDelay }}
         >
           <h3>{title}:</h3>
-          <div className={styles.resultItem__contentContainer}>
+          <div>
             <TextComponent statement={statement} />
           </div>
         </div>
@@ -122,13 +124,21 @@ export const query = graphql`
   }
 `;
 
+
 export default Results;
 
-export function Head({ pageContext }) {
+export function Head({ pageContext, data }) {
   const { language } = pageContext;
+  const locales = data.locales.edges[2].node.data;
+
+  let obj = undefined;
+  if (locales) {
+      obj = JSON.parse(locales);
+  }
   return (
     <>
       <html lang={language} dir={dir(language)} />
+      <title>{obj?.title}</title>
       <body className={`-${dir(language)} -${language}`} />
     </>
   )

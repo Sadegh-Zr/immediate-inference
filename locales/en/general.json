@@ -31,5 +31,10 @@
   "universalAffirmativeShort": "U.A",
   "particularAffirmativeShort": "P.A",
   "universalNegativeShort": "U.N",
-  "particularNegativeShort": "P.N"
+  "particularNegativeShort": "P.N",
+  "guide": "Guide",
+  "themeSwitchLight": "Switch To Light mode",
+  "themeSwitchDark": "Switch To Dark mode",
+  "github": "Github",
+  "table": "Table"
 }

@@ -6,10 +6,10 @@ import { FiGithub } from 'react-icons/fi';
 import { RxTable } from 'react-icons/rx';
 import LanguageSwitch from '../LanguageSwitch';
 import { useLanguage, useTheme } from '../../hooks';
-import { Link } from 'gatsby-plugin-react-i18next';
+import { Link, useTranslation } from 'gatsby-plugin-react-i18next';
 
 const Header = ({ title, hideLngChange, onGuideClick }) => {
-  const { lng } = useLanguage();
+  const { t } = useTranslation('general');
   const { theme, setTheme } = useTheme();
   const changeTheme = ({ currentTarget }) => {
     currentTarget.disabled = true;
@@ -27,6 +27,7 @@ const Header = ({ title, hideLngChange, onGuideClick }) => {
             type="button"
             onClick={changeTheme}
             id="themeChangeButton"
+            aria-label={t(`themeSwitch${theme === 'light' ? 'Dark' : 'Light'}`, { ns: 'general'})}
             className={styles.nav__button}
           >
             {theme === 'light' ? (
@@ -39,7 +40,7 @@ const Header = ({ title, hideLngChange, onGuideClick }) => {
               />
             )}
           </button>
-          <Link to="/table" className={styles.nav__button}>
+          <Link to="/table" aria-label={t('table', { ns: 'general'})} className={styles.nav__button}>
             <RxTable size="2.2rem" color="var(--color-text-primary)" />
           </Link>
           {!hideLngChange && (
@@ -47,8 +48,8 @@ const Header = ({ title, hideLngChange, onGuideClick }) => {
               <button
                 type="button"
                 onClick={onGuideClick}
-                id="themeChangeButton"
                 className={styles.nav__button}
+                aria-label={t('guide', { ns: 'general' })}
               >
                 <RiQuestionMark
                   style={{ transform: 'scaleX(-1)' }}
@@ -60,6 +61,7 @@ const Header = ({ title, hideLngChange, onGuideClick }) => {
                 target="_blank"
                 href="https://github.com/Sadegh-Zr/immediate-inference"
                 rel="noreferrer"
+                aria-label={t('github', { ns: 'general'})}
                 className={styles.nav__button}
               >
                 <FiGithub size="2rem" color="var(--color-text-primary)" />
@@ -73,7 +75,6 @@ const Header = ({ title, hideLngChange, onGuideClick }) => {
               <button
                 type="button"
                 onClick={onGuideClick}
-                id="themeChangeButton"
                 className={styles.nav__button}
               >
                 <RiQuestionMark
@@ -86,6 +87,7 @@ const Header = ({ title, hideLngChange, onGuideClick }) => {
                 href="https://github.com/Sadegh-Zr/immediate-inference"
                 rel="noreferrer"
                 className={styles.nav__button}
+                aria-label={t('github', { ns: 'general'})}
               >
                 <FiGithub size="2rem" color="var(--color-text-primary)" />
               </a>

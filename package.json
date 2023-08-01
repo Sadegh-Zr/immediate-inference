@@ -16,6 +16,8 @@
   },
   "dependencies": {
     "gatsby": "^5.11.0",
+    "gatsby-plugin-manifest": "^5.11.0",
+    "gatsby-plugin-offline": "^6.11.0",
     "gatsby-plugin-react-i18next": "^3.0.1",
     "gatsby-source-filesystem": "^5.11.0",
     "i18next": "^22.5.1",
@@ -29,5 +31,8 @@
     "rodal": "^2.1.0",
     "typewriter-effect": "^2.20.1",
     "use-debounce": "^9.0.4"
+  },
+  "devDependencies": {
+    "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.31"
   }
 }

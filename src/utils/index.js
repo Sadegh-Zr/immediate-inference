@@ -136,6 +136,14 @@ const getLngTitle = lng => {
   }
 }
 
+const isBrowser = typeof window !== "undefined";
+
+const getDefaultTheme = () => {
+  if (!isBrowser) return 'light';
+  const wasDark = localStorage.getItem('previousTheme') === 'dark';
+  return (wasDark || window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
+};
+
 export {
   getStatementType,
   getBorderRadius,
@@ -149,4 +157,6 @@ export {
   getFirstFragmentProperty,
   getSecondFragmentProperty,
   getLngTitle,
+  isBrowser,
+  getDefaultTheme,
 };
