@@ -12,7 +12,8 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "deploy": "gatsby build --prefix-paths && gh-pages -f -d public"
   },
   "dependencies": {
     "gatsby": "^5.11.0",
@@ -33,6 +34,6 @@
     "use-debounce": "^9.0.4"
   },
   "devDependencies": {
-    "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.31"
+    "gh-pages": "^5.0.0"
   }
 }

@@ -2,33 +2,33 @@
   font-family: 'iranyekan';
   font-weight: 300;
   font-style: normal;
-  src: url(/fonts/iranyekanlight.woff2) format("woff2");
+  src: url(/immediate-inference/fonts/iranyekanlight.woff2) format("woff2");
 }
 
 @font-face {
   font-family: 'iranyekan';
   font-weight: bold;
   font-style: normal;
-  src: url(/fonts/iranyekanbold.woff2) format("woff2");
+  src: url(/immediate-inference/fonts/iranyekanbold.woff2) format("woff2");
 }
 
 @font-face {
   font-family: 'iranyekan';
   font-weight: normal;
   font-style: normal;
-  src: url(/fonts/iranyekanregular.woff2) format("woff2");
+  src: url(/immediate-inference/fonts/iranyekanregular.woff2) format("woff2");
 }
 
 @font-face {
   font-family: 'mali';
   font-weight: 300;
   font-style: normal;
-  src: url(/fonts/Mali-Light.woff2) format("woff2");
+  src: url(/immediate-inference/fonts/Mali-Light.woff2) format("woff2");
 }
 
 @font-face {
   font-family: 'mali';
   font-weight: normal;
   font-style: normal;
-  src: url(/fonts/Mali-Regular.woff2) format("woff2");
+  src: url(/immediate-inference/fonts/Mali-Regular.woff2) format("woff2");
 }

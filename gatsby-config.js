@@ -2,9 +2,10 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 
-const siteUrl = `https://immediate-inference.iran.liara.run`;
+const siteUrl = `https://sadegh-zr.github.io/immediate-inference`;
 
 module.exports = {
+  pathPrefix: "/immediate-inference",
   siteMetadata: {
     siteUrl,
   },
@@ -62,6 +63,5 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-offline',
    },
-   "gatsby-plugin-webpack-bundle-analyser-v2"
   ],
 }
