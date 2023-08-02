@@ -44,7 +44,7 @@ module.exports = {
         lang: 'en',
         theme_color: `#3498db`,
         display: `standalone`,
-        icon: "./src/images/icon.png",
+        icon: "./src/images/icon.svg",
         icon_options: {
           purpose: `any maskable`,
         },
