@@ -39,6 +39,8 @@
 
 .modal a {
   color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 30%;
 }
 
 .modalButtonContainer {
