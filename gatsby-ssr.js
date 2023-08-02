@@ -4,7 +4,7 @@ export const onRenderBody = ({ setHeadComponents }) => {
   setHeadComponents([
     <link
       rel="preload"
-      href="/fonts/iranyekanbold.woff2"
+      href="/immediate-inference/fonts/iranyekanbold.woff2"
       as="font"
       type="font/woff2"
       crossOrigin="anonymous"
@@ -12,7 +12,7 @@ export const onRenderBody = ({ setHeadComponents }) => {
     />,
     <link
       rel="preload"
-      href="/fonts/iranyekanlight.woff2"
+      href="/immediate-inference/fonts/iranyekanlight.woff2"
       as="font"
       type="font/woff2"
       crossOrigin="anonymous"
@@ -20,7 +20,7 @@ export const onRenderBody = ({ setHeadComponents }) => {
     />,
     <link
       rel="preload"
-      href="/fonts/iranyekanregular.woff2"
+      href="/immediate-inference/fonts/iranyekanregular.woff2"
       as="font"
       type="font/woff2"
       crossOrigin="anonymous"
@@ -28,7 +28,7 @@ export const onRenderBody = ({ setHeadComponents }) => {
     />,
     <link
       rel="preload"
-      href="/fonts/Mali-Regular.woff2"
+      href="/immediate-inference/fonts/Mali-Regular.woff2"
       as="font"
       type="font/woff2"
       crossOrigin="anonymous"
@@ -36,7 +36,7 @@ export const onRenderBody = ({ setHeadComponents }) => {
     />,
     <link
       rel="preload"
-      href="/fonts/Mali-Light.woff2"
+      href="/immediate-inference/fonts/Mali-Light.woff2"
       as="font"
       type="font/woff2"
       crossOrigin="anonymous"
