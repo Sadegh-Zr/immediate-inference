@@ -37,6 +37,13 @@
   color: var(--color-text-secondary);
 }
 
+.guide {
+  font-size: var(--font-size-small);
+  text-align: center;
+  margin-top: 2rem;
+  color: var(--color-text-secondary);
+}
+
 .resultContainer {
   padding: 1.5rem 1.7rem;
   display: flex;

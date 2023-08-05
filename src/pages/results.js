@@ -102,6 +102,7 @@ const Results = () => {
           <h2>{t('original')}: </h2>
           <span>{generateStatement(originalStatement)}</span>
         </div>
+        {!isPredicative && (<p className={styles.guide}>{t('guide')}</p>)}
         <div className={styles.resultContainer}>{renderItems()}</div>
       </div>
     </PageWrapper>
