@@ -1,49 +1,25 @@
 <p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
+  <a href="[https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter](https://sadegh-zr.github.io/immediate-inference/)">
+    <img alt="Gatsby" src="https://github.com/Sadegh-Zr/immediate-inference/assets/93543701/3beac570-39eb-4671-b130-ede8d1af593c" width="60" />
   </a>
 </p>
 <h1 align="center">
-  Gatsby Minimal Starter
+  Immediate Inference PWA
 </h1>
+<p align="center">Get all true statements from your inputed statement using immediate inference in logic</p>
 
-## 🚀 Quick start
+## 🙄 Why?
+My main purpose of developing such an app was to extract all true statement rules from Quran & Hadith which I -as a Shia muslim- believe in their truthness. It's kind of like [what Mulla Sadra did to prove a Hadith using a Quran's Ayah based on the obverted contraposition.](https://maktabevahy.org/Document/Speech/Details/14/%D8%AE%D9%88%D8%AF-%D8%B1%D8%A7-%D8%A8%D8%B4%D9%86%D8%A7%D8%B3-%D8%AA%D8%A7-%D8%AE%D8%AF%D8%A7-%D8%B1%D8%A7-%D8%A8%D8%B4%D9%86%D8%A7%D8%B3%DB%8C?page=5http)
 
-1.  **Create a Gatsby site.**
+You can enter your predicative or conditional statement in this app and then get all true statements based on what you've entered. These statements which are deduced by immediate inference are conversion, obverted contraposition, obvertion(for subject(or antecedent), predicate(or consequent) and both).
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
-
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
-
-2.  **Start developing.**
-
-    Navigate into your new site’s directory and start it up.
-
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
-
-3.  **Open the code and start customizing!**
-
-    Your site is now running at http://localhost:8000!
-
-    Edit `src/pages/index.js` to see your site update in real-time!
-
-4.  **Learn more**
-
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Tutorials](https://www.gatsbyjs.com/docs/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Guides](https://www.gatsbyjs.com/docs/how-to/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-## 🚀 Quick start (Netlify)
-
-Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
-
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-minimal)
+## 💁‍♂️Contrabution
+This PWA has been developed using Gatsby. So you can feel free to install the packages:
+```shell
+npm install
+```
+and then run:
+```shell
+npm run develop
+```
+**Note:** Please be aware that fonts might not shown correctly. That's because of Github Pages; It was required to use a path prefix of "/immediate-inference" for the URL of the imported fonts which would result in 404 in local development, but fine in deployment.
