@@ -1,6 +1,8 @@
 .PageWrapper {
   display: flex;
   flex-direction: column;
+  --header-height: 130px;
+  padding-top: var(--header-height);
 }
 
 .modal {

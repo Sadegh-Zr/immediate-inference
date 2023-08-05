@@ -144,7 +144,6 @@ export default function IndexPage() {
             />
           )}
         </div>
-
         <button
           form="STATEMENT_FORM"
           type="submit"

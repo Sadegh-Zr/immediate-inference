@@ -4,6 +4,11 @@
   color: var(--color-text-primary);
   direction: rtl;
   background: var(--color-background);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: var(--header-height);
   /* animation: 0.3s fadeIn forwards ease-in 0.3s;
     opacity: 0;
     transform: translateY(1.5rem); */

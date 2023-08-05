@@ -27,7 +27,7 @@
   align-self: center;
   width: 100%;
   max-width: var(--max-content-width);
-  padding-bottom: 6rem;
+  padding-bottom: 0.5rem;
 }
 
 /* Prevent submit button and form confliction when virtual keyboard is open on mobile */
@@ -43,7 +43,7 @@
 
 .form__submit {
   position: fixed;
-  bottom: 6rem;
+  bottom: 2rem;
   left: 50%;
   z-index: 3;
   /* transform: translate(-50%, calc(6rem + 100%)); */
@@ -73,7 +73,7 @@
   width: 5rem;
   height: 5rem;
   left: 50%;
-  top: 0;
+  top: 1rem;
   transition: 0.3s ease-out;
   background-color: var(--color-primary);
   z-index: 0;
