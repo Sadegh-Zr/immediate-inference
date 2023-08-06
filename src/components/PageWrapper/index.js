@@ -55,7 +55,7 @@ const PageWrapper = ({ className, title, children, hideLngChange }) => {
             <a
               target="_blank"
               rel="noreferrer"
-              href="https://maktabevahy.org/Document/Speech/Details/14/%D8%AE%D9%88%D8%AF-%D8%B1%D8%A7-%D8%A8%D8%B4%D9%86%D8%A7%D8%B3-%D8%AA%D8%A7-%D8%AE%D8%AF%D8%A7-%D8%B1%D8%A7-%D8%A8%D8%B4%D9%86%D8%A7%D8%B3%DB%8C?page=5"
+              href="https://maktabevahy.org/Document/Speech/Details/14/%D8%AE%D9%88%D8%AF-%D8%B1%D8%A7-%D8%A8%D8%B4%D9%86%D8%A7%D8%B3-%D8%AA%D8%A7-%D8%AE%D8%AF%D8%A7-%D8%B1%D8%A7-%D8%A8%D8%B4%D9%86%D8%A7%D8%B3%DB%8C?page=5http"
             >
               {t('modalSecondParagraphLinkText')}
             </a>
