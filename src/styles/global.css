@@ -10,7 +10,12 @@
     --toastify-toast-max-height: 5rem !important;
     --toastify-toast-width: 380px !important;
     --max-content-width: 500px;
-
+    --color-background: #fff;
+    --color-text-primary: #000;
+    --color-border: #d4d4d4;
+    --color-text-secondary: #949494;
+    --color-placeholder: #d4d4d4;
+    --color-focus: rgba(0, 0, 0, 0.7);
   }
 
   
@@ -39,16 +44,6 @@
   body.-rtl {
     direction: rtl;
   }
-
-  .container:not(.-dark) {
-    --color-background: #fff;
-    --color-text-primary: #000;
-    --color-border: #d4d4d4;
-    --color-text-secondary: #949494;
-    --color-placeholder: #d4d4d4;
-    --color-focus: rgba(0, 0, 0, 0.7);
-  }
-  
   .container.-dark {
     --color-background: #161616;
     --color-text-primary: #fff;

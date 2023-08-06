@@ -97,7 +97,7 @@ export default function IndexPage() {
   ];
 
   return (
-    <PageWrapper title={t('title')}>
+    <PageWrapper title={t('title')} className={styles.pageWrapper}>
       <form id="STATEMENT_FORM" onSubmit={handleSubmit} className={styles.form}>
         <ToastContainer
           rtl={isRtl}
