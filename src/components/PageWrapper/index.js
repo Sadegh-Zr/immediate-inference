@@ -4,6 +4,7 @@ import * as React from 'react';
 import * as styles from './PageWrapper.module.css';
 import { EITAA_MESSANGER, EMAIL } from '../../constants';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
+import 'rodal/lib/rodal.css';
 import { isBrowser } from '../../utils';
 
 const PageWrapper = ({ className, title, children, hideLngChange }) => {
@@ -63,7 +64,7 @@ const PageWrapper = ({ className, title, children, hideLngChange }) => {
           <p>
             {t('modalThirdParagraphContactBefore')}{' '}
             <a href={`mailto: ${EMAIL}`}>{t('email')}</a> {t('and')}{' '}
-            <a href={EITAA_MESSANGER} target="_blank">
+            <a href={EITAA_MESSANGER} target="_blank"  rel="noreferrer">
               {t('eitaaMessanger')}
             </a>{' '}
             {t('modalThirdParagraphContactAfter')}
