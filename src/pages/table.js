@@ -16,7 +16,7 @@ const Table = () => {
       <table className={styles.table}>
         <thead>
           <tr>
-            <th></th>
+            <th> </th>
             <th>{t('universalAffirmativeShort', { ns: 'general' })}</th>
             <th>{t('particularAffirmativeShort', { ns: 'general' })}</th>
             <th>{t('universalNegativeShort', { ns: 'general' })}</th>
@@ -92,7 +92,6 @@ export default Table;
 
 export function Head({ pageContext, data }) {
   const { language } = pageContext;
-  const locales = data.locales.edges[2].node.data;
   const pageLocale = data.locales.edges.find(edge => {
     return edge.node.ns === 'table';
   });

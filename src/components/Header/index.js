@@ -5,7 +5,7 @@ import { RiQuestionMark } from 'react-icons/ri';
 import { FiGithub } from 'react-icons/fi';
 import { RxTable } from 'react-icons/rx';
 import LanguageSwitch from '../LanguageSwitch';
-import { useLanguage, useTheme } from '../../hooks';
+import { useTheme } from '../../hooks';
 import { Link, useTranslation } from 'gatsby-plugin-react-i18next';
 
 const Header = ({ title, hideLngChange, onGuideClick }) => {

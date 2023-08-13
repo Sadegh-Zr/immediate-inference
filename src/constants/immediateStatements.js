@@ -1,14 +1,6 @@
 import { AFFIRMATIVE, NEGATIVE } from './qualityTypes';
 import { PARTICULAR, UNIVERSAL } from './quantityTypes';
 
-const PARTS_RELATION = {
-  equal: 'EQUAL',
-  firstFragmentProperSubset: 'FIRST_FRAGMENT_PROPER_SUBSET',
-  secondFragmentProperSubset: 'SECOND_FRAGMENT_PROPER_SUBSET',
-  disjoint: 'DISJOINT',
-  overlapping: 'OVERLAPPING',
-};
-
 const UNIVERSAL_AFFIRMATIVE = {
   quality: AFFIRMATIVE,
   quantity: UNIVERSAL,

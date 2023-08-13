@@ -23,7 +23,7 @@ import { useLanguage } from '../hooks';
 import { dir } from 'i18next';
 
 export default function IndexPage() {
-  const { language: lng, navigate } = useI18next();
+  const { navigate } = useI18next();
   const { t } = useTranslation(['index', 'general']);
   const { isRtl } = useLanguage();
 

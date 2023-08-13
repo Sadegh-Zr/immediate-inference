@@ -133,6 +133,8 @@ const getLngTitle = lng => {
       return 'فا'
     case 'en':
       return 'en';
+    default:
+      return ''; 
   }
 }
 
