@@ -36,5 +36,6 @@
   "themeSwitchLight": "Switch To Light mode",
   "themeSwitchDark": "Switch To Dark mode",
   "github": "Github",
-  "table": "Table"
+  "table": "Table",
+  "description": "Get all true statements from your inputed statement using immediate inference in logic"
 }
