@@ -146,7 +146,7 @@ export function Head({ pageContext, data }) {
       <meta property="og:locale" content={language === 'en' ? 'en_US' : 'fa_IR'} />
       <meta property="og:title" content={localeData?.title} />
       <meta name="og:description" content={generalLocaleData?.description} />
-      <meta property="og:image" content={language === 'en' ? "https://github.com/Sadegh-Zr/immediate-inference/assets/93543701/a22c832c-ed50-4946-9290-bb8afe3d96b4" : "https://github.com/Sadegh-Zr/immediate-inference/assets/93543701/ebfdfa21-d865-4390-890e-3aa7e9c13d99"} />
+      <meta property="og:image" content={"https://github.com/Sadegh-Zr/immediate-inference/assets/93543701/3beac570-39eb-4671-b130-ede8d1af593c"} />
       <body className={`-${dir(language)} -${language}`} />
     </>
   )
