@@ -133,11 +133,20 @@ export function Head({ pageContext, data }) {
   const pageLocale = data.locales.edges.find(edge => {
     return edge.node.ns === 'results';
   });
+  const indexLocale = data.locales.edges.find(edge => {
+    return edge.node.ns === 'index';
+  });
   const localeData = JSON.parse(pageLocale.node.data);
+  const indexLocaleData = JSON.parse(indexLocale.node.data)
   return (
     <>
       <html lang={language} dir={dir(language)} />
       <title>{localeData.title}</title>
+      <meta name="description" content={indexLocaleData?.description} />
+      <meta property="og:locale" content={language === 'en' ? 'en_US' : 'fa_IR'} />
+      <meta property="og:title" content={localeData?.title} />
+      <meta name="og:description" content={indexLocaleData?.description} />
+      <meta property="og:image" content={language === 'en' ? "https://github.com/Sadegh-Zr/immediate-inference/assets/93543701/a22c832c-ed50-4946-9290-bb8afe3d96b4" : "https://github.com/Sadegh-Zr/immediate-inference/assets/93543701/ebfdfa21-d865-4390-890e-3aa7e9c13d99"} />
       <body className={`-${dir(language)} -${language}`} />
     </>
   )

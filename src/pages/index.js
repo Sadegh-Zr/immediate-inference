@@ -149,6 +149,7 @@ export default function IndexPage() {
           type="submit"
           onClick={handleSubmit}
           className={styles.form__submit}
+          id="IndexSubmitButton"
         >
           <div className={styles.form__submitAnimator} />
           <span className={styles.form__submitText}>{t('submitButton')}</span>
@@ -186,6 +187,10 @@ export function Head({ pageContext, data }) {
       <html lang={language} dir={dir(language)} />
       <title>{localeData?.title}</title>
       <meta name="description" content={localeData?.description} />
+      <meta property="og:locale" content={language === 'en' ? 'en_US' : 'fa_IR'} />
+      <meta property="og:title" content={localeData?.title} />
+      <meta name="og:description" content={localeData?.description} />
+      <meta property="og:image" content={language === 'en' ? "https://github.com/Sadegh-Zr/immediate-inference/assets/93543701/a22c832c-ed50-4946-9290-bb8afe3d96b4" : "https://github.com/Sadegh-Zr/immediate-inference/assets/93543701/ebfdfa21-d865-4390-890e-3aa7e9c13d99"} />
       <body className={`-${dir(language)} -${language}`} />
     </>
   )
