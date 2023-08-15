@@ -9,9 +9,6 @@
   left: 0;
   width: 100%;
   min-height: var(--header-height);
-  /* animation: 0.3s fadeIn forwards ease-in 0.3s;
-    opacity: 0;
-    transform: translateY(1.5rem); */
 }
 
 .nav {
@@ -21,6 +18,12 @@
   --button-size: 4.5rem;
   padding-top: 0.5rem;
   padding-left: 1rem;
+}
+
+
+:global(.-guideShown) .nav {
+  animation: 0.3s fade forwards ease-in 0.3s;
+  opacity: 0;
 }
 
 .nav.equalHorizontalPadding {
@@ -75,13 +78,6 @@
   background: var(--color-border);
 }
 
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 .Header__title {
   font-size: var(--font-size-title);
   padding: 1.2rem;
@@ -89,4 +85,25 @@
   align-self: center;
   text-align: center;
   max-width: calc(100% - 8rem);
+}
+
+:global(.-guideShown) .Header__title {
+  animation: 0.3s fadeIn forwards ease-in 0.9s;
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes fade {
+  to {
+    opacity: 1;
+  }
 }

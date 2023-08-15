@@ -9,9 +9,8 @@ import { isBrowser } from '../../utils';
 
 const PageWrapper = ({ className, title, children, hideLngChange }) => {
   const { t } = useTranslation('guide');
-  const [isGuideModalVisible, updateModalVisibility] = React.useState(
-    !JSON.parse(isBrowser ? localStorage.getItem('hasGuideShown') : false)
-  );
+  const isGuideVisibleFromStorage = !JSON.parse(isBrowser ? localStorage.getItem('hasGuideShown') : false);
+  const [isGuideModalVisible, updateModalVisibility] = React.useState(false);
   const installPrompt = React.useRef();
   const toggleModal = () => {
     if (isGuideModalVisible) {
@@ -34,8 +33,23 @@ const PageWrapper = ({ className, title, children, hideLngChange }) => {
       window.removeEventListener('beforeinstallprompt', handleBeforeInstall, true);
     }
   }, []);
+
+  React.useEffect(() => {
+    const submitButton = document.getElementById('IndexSubmitButton');
+    const handleAnimationEnd = (e) => {
+      if(!e.elapsedTime) return;
+      if (isGuideVisibleFromStorage) {
+        updateModalVisibility(true);
+      }
+    }
+    submitButton.addEventListener('animationend', handleAnimationEnd);
+
+    return () => {
+      submitButton.removeEventListener('animationend', handleAnimationEnd, false)
+    }
+  }, []);
   return (
-    <div className={`${styles['PageWrapper']} ${className}`}>
+    <div className={`${styles['PageWrapper']} ${isGuideVisibleFromStorage ? '-guideShown' : ''  } ${className}`}>
       <Header
         hideLngChange={hideLngChange}
         title={title}
