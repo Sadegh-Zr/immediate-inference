@@ -10,6 +10,7 @@ module.exports = {
     siteUrl,
   },
   plugins: [
+    `gatsby-plugin-fix-fouc`,
     {
       resolve: `gatsby-plugin-nprogress`,
       options: {
