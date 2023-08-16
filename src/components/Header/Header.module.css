@@ -22,8 +22,8 @@
 
 
 :global(.-guideShown) .nav {
-  animation: 0.3s fade forwards ease-in 0.3s;
-  opacity: 0;
+  /* animation: 0.3s fade forwards ease-in 0.3s;
+  opacity: 0; */
 }
 
 .nav.equalHorizontalPadding {
@@ -88,9 +88,9 @@
 }
 
 :global(.-guideShown) .Header__title {
-  animation: 0.3s fadeIn forwards ease-in 0.9s;
+  /* animation: 0.3s fadeIn forwards ease-in 0.9s;
   opacity: 0;
-  transform: translateY(10px);
+  transform: translateY(10px); */
 }
 
 

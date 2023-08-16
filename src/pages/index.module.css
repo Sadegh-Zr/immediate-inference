@@ -11,9 +11,9 @@
 }
 
 :global(.-guideShown) .statementSwitchContainer {
-  animation: 0.2s fadeIn forwards ease-out 1.4s;
+  /* animation: 0.2s fadeIn forwards ease-out 1.4s;
   opacity: 0;
-  transform: translateY(1rem);
+  transform: translateY(1rem); */
 }
 
 @keyframes fadeIn {
@@ -77,8 +77,8 @@
 }
 
 :global(.-guideShown) .form__submit {
-  transform: translate(-50%, calc(6rem + 100%));
-  animation: 0.4s goIn forwards ease-out;
+  /* transform: translate(-50%, calc(6rem + 100%));
+  animation: 0.4s goIn forwards ease-out; */
 }
 
 @keyframes goIn {

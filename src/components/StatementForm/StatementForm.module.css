@@ -22,9 +22,9 @@
 }
 
 :global(.-guideShown) .StatementForm.predicative .subjectForm {
-  animation: 0.3s fadeInSubject forwards ease-out 1.9s;
+  /* animation: 0.3s fadeInSubject forwards ease-out 1.9s;
   opacity: 0;
-  transform: scale(1.2);
+  transform: scale(1.2); */
 }
 
 :global(body.-ltr) .StatementForm.predicative .subjectForm {
@@ -51,9 +51,9 @@
 }
 
 :global(.-guideShown) .predicateForm {
-  animation: 0.3s fadeInPredicate forwards ease-out 2.2s;
+  /* animation: 0.3s fadeInPredicate forwards ease-out 2.2s;
   opacity: 0;
-  transform: scale(1.2);
+  transform: scale(1.2); */
 }
 
 :global(body.-ltr) .predicateForm {
@@ -133,15 +133,15 @@
 }
 
 :global(.-guideShown) .switchesContainer > *:first-child {
-  animation: 0.3s fadeIn forwards ease-in 2.5s;
+  /* animation: 0.3s fadeIn forwards ease-in 2.5s;
   opacity: 0;
-  transform: translateY(1.5rem);
+  transform: translateY(1.5rem); */
 }
 
 :global(.-guideShown) .switchesContainer > *:last-child {
-  animation: 0.3s fadeIn forwards ease-in 2.8s;
+  /* animation: 0.3s fadeIn forwards ease-in 2.8s;
   opacity: 0;
-  transform: translateY(1.5rem);
+  transform: translateY(1.5rem); */
 }
 
 @keyframes fadeIn {
