@@ -14,7 +14,16 @@ const RootElement = ({ children }) => {
   const container = React.useRef();
   const themeClip = React.useRef();
 
+  const wasPreviouslyDark = () => {
+    if (!isBrowser) return 'light';
+    if (!localStorage.getItem('previousTheme')) {
+      return getDefaultTheme() === 'dark';
+    }
+    return localStorage.getItem('previousTheme') === 'dark';
+  }
+
   React.useEffect(() => {
+    if (!isComponentMounted.current) return;
     localStorage.setItem('previousTheme', theme);
   }, [theme]);
 
@@ -71,7 +80,7 @@ const RootElement = ({ children }) => {
           />
             <div
               ref={container}
-              className={`${containerClassName}${wasDark ? ' -dark' : ''}`}
+              className={`${containerClassName}${wasPreviouslyDark() ? ' -dark' : ''}`}
             >
               <ThemeContext.Provider value={{ theme, setTheme }}>
                 <LngContext.Provider value={lng}>

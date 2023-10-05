@@ -142,8 +142,10 @@ const isBrowser = typeof window !== "undefined";
 
 const getDefaultTheme = () => {
   if (!isBrowser) return 'light';
-  const wasDark = localStorage.getItem('previousTheme') === 'dark';
-  return (wasDark || window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
+  if (!localStorage.getItem('previousTheme')) {
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+  return localStorage.getItem('previousTheme');
 };
 
 export {
