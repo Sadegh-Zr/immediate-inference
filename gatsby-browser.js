@@ -7,7 +7,6 @@ const containerClassName = 'container';
 
 const RootElement = ({ children }) => {
   const { lng } = useI18next();
-  const wasDark = isBrowser ? localStorage.getItem('previousTheme') === 'dark' : 'light';
   const [theme, setTheme] = React.useState(getDefaultTheme);
   const isComponentMounted = React.useRef(false);
   const scrollValue = React.useRef(0);
