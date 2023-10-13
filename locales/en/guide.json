@@ -2,7 +2,7 @@
   "modalTitle": "Hello",
   "modalFirstParagraph": "In this application, you can see all true statements which were deduced by immediate inferrence in the science of logic.",
   "modalSecondParagraph": "My main purpose of developing such an app was to extract all true statement rules from Quran & Hadith which I -as a Shia muslim- believe in their truthness. It's kind of like",
-  "modalSecondParagraphLinkText": "what Mulla Sadra did to prove a Hadith using a Quran's Ayah based on the obverted contraposition",
+  "modalSecondParagraphLinkText": "what Mulla Sadra did to prove a Hadith using a Quran's Ayah based on the obverted contraposition.(It's questionable)",
   "modalForthParagraph": "This app has been developed as a PWA, so you can install it and use it offline!",
   "modalThirdParagraphContactBefore": "You can share your comments with me by",
   "email": "email",
